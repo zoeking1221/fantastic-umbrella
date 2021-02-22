@@ -60,23 +60,7 @@ router.post('/', (req, res) => {
   });
 });
 
-
-// update tag by its 'id' value
-// router.put('/:id', (req, res) => {
-//   Tag.update(req.body, {
-//     where: {
-//       id: req.params.id,
-//     },
-//   })
-//   .then((tag) => {
-//     res.status(200).json(tag);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//     res.status(400).json(err);
-//   });
-// });
-
+// update a tag's name by its `id` value
 router.put('/:id', (req, res) => {
   Tag.update({
     tag_name: req.body.tag_name
